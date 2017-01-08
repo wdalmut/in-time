@@ -11,7 +11,7 @@ var Time  = function(time) {
 };
 
 Time.prototype.isBefore = function(time) {
-  return this.time < time;
+  return this.time < toTime(time);
 };
 
 module.exports = Time;

@@ -1,5 +1,7 @@
 var toTime = function(time) {
-  return time.split(':').reduce((memo, item, index) => (index === 0) ? memo + (item * 60) : memo + item, 0);
+  return time.split(':')
+    .map(item => parseInt(item))
+    .reduce((memo, item, index) => (index === 0) ? memo + (item * 60) : memo + item, 0);
 };
 
 var Time  = function(time) {
